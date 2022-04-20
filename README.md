@@ -3,4 +3,6 @@ A project which uses ESP32 to control stepper motors using positional values via
 
 Please ensure you have the AccelStepper library pre-installed
 
-Will expand to include IoT capabilities
+Will expand to include IoT capabilities. 
+
+Currently using TB6600 stepper drivers.
