@@ -18,7 +18,7 @@ long max_x_mm = 200; //max distance the gantry can travel in mm for x axis
 byte run_sketch_pin = 5; //master control of whether machine runs the sketch or not, needs to be pulled low to run sketch
 byte manual_sketch_rerun_pin = 13; //when the run_sketch_pin is low and the sketch has already run 1 time, trigger LOW to rerun sketch
 
-byte motor_y_enable = 35;
+byte motor_y_enable = 19;
 byte motor_y_endStop = 25;
 byte motor_x_enable = 26;
 byte motor_x_endStop = 12;
