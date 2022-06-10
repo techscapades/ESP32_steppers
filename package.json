@@ -2,7 +2,9 @@
     "name": "ESP32_steppers",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-node-mysql": "1.0.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",
