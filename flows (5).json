@@ -1,0 +1,514 @@
+[
+    {
+        "id": "43f4d05e.f4b4a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "810c1f1e.04f7d",
+        "type": "mqtt in",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "topic": "outTopic",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3724f98.71e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 940,
+        "y": 800,
+        "wires": [
+            [
+                "5d03406b.5abfb"
+            ]
+        ]
+    },
+    {
+        "id": "5d03406b.5abfb",
+        "type": "debug",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2f2a6e70.0b94a2",
+        "type": "mqtt out",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c3724f98.71e4",
+        "x": 870,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "7c71d73f.4d21b8",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "move_x_indiv",
+        "payload": "{\"x_move\":50}",
+        "payloadType": "json",
+        "x": 480,
+        "y": 840,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "83833079.fa301",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "move_xy",
+        "payload": "{\"x_move\":0,\"y_move\":0}",
+        "payloadType": "json",
+        "x": 460,
+        "y": 960,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "7bb695c2.88d3bc",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "move_xy",
+        "payload": "{\"x_move\":100,\"y_move\":200}",
+        "payloadType": "json",
+        "x": 510,
+        "y": 900,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "77e44d31.13a214",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "rehome",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 490,
+        "y": 1020,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "f37f750c.ecbfa8",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "move_y_indiv",
+        "payload": "{\"y_move\":30}",
+        "payloadType": "json",
+        "x": 480,
+        "y": 780,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "13822c4f.ecea04",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "zero_xy",
+        "payload": "{\"x_zero\":50,\"y_zero\":50}",
+        "payloadType": "json",
+        "x": 430,
+        "y": 1080,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "45799958.92bed8",
+        "type": "mysql",
+        "z": "43f4d05e.f4b4a",
+        "mydb": "851146e2.e68678",
+        "name": "",
+        "x": 590,
+        "y": 580,
+        "wires": [
+            [
+                "fab7ce03.04a8e"
+            ]
+        ]
+    },
+    {
+        "id": "24f9672e.33ad78",
+        "type": "function",
+        "z": "43f4d05e.f4b4a",
+        "name": "Create SQL query",
+        "func": "let curr_pos = msg.payload;\nlet query_string = \"SELECT * FROM `test_coor` WHERE id =\" \nmsg.topic = query_string + curr_pos;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "45799958.92bed8"
+            ]
+        ]
+    },
+    {
+        "id": "fc69d80c.96ef38",
+        "type": "debug",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "29cfafc7.4b9c5",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "generate intial request to read from DB",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM `test_coor` WHERE id = 1",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "45799958.92bed8"
+            ]
+        ]
+    },
+    {
+        "id": "fab7ce03.04a8e",
+        "type": "function",
+        "z": "43f4d05e.f4b4a",
+        "name": "convert MySQL output to JSON",
+        "func": "p = msg.payload;\nmsg.payload = {\n        \"id\": p[0].id,\n    \"x_move\": p[0].x_coor,\n    \"y_move\": p[0].y_coor\n};\nmsg.topic = \"move_xy\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 580,
+        "wires": [
+            [
+                "fc69d80c.96ef38",
+                "5894cb58.36c0e4"
+            ]
+        ]
+    },
+    {
+        "id": "31690060.b4909",
+        "type": "mqtt in",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "topic": "next_val",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3724f98.71e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 700,
+        "wires": [
+            [
+                "a460c735.5fd918",
+                "1b816840.4bb908"
+            ]
+        ]
+    },
+    {
+        "id": "a460c735.5fd918",
+        "type": "debug",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1b816840.4bb908",
+        "type": "delay",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "24f9672e.33ad78"
+            ]
+        ]
+    },
+    {
+        "id": "5894cb58.36c0e4",
+        "type": "delay",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 940,
+        "y": 700,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "69a500e6.dba1f",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "move_x_indiv",
+        "payload": "{\"x_move\":0}",
+        "payloadType": "json",
+        "x": 590,
+        "y": 1220,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "860e6d9e.5e529",
+        "type": "inject",
+        "z": "43f4d05e.f4b4a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "move_y_indiv",
+        "payload": "{\"y_move\":0}",
+        "payloadType": "json",
+        "x": 590,
+        "y": 1160,
+        "wires": [
+            [
+                "2f2a6e70.0b94a2"
+            ]
+        ]
+    },
+    {
+        "id": "c3724f98.71e4",
+        "type": "mqtt-broker",
+        "name": "local:Mosquitto",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "851146e2.e68678",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "esp32_coor",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]
